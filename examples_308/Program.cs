@@ -13,4 +13,23 @@ void PrintArray(int[] array)
     }
     Console.WriteLine();
 }
+
+
+void SelectionSort(int[] array)
+{
+    for (int i = 0; i < array.Length - 1; i++)   //не больше пяти аргументов
+    {
+        int minPosition = i;
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if (array[j] < array[minPosition]) minPosition = j;
+        }
+        int teporary = array[i];
+        array[i] = array[minPosition];
+        array[minPosition] = teporary;
+    }
+}
+PrintArray(arr);
+SelectionSort(arr);
+
 PrintArray(arr);
